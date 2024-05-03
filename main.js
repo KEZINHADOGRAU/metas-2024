@@ -37,7 +37,6 @@ function calculaTempo(tempoObjetivo) {
         return [0,0,0,0];
     }
 }
-
 function atualizaCronometro(){
     for (let i=0; i<contadores.length;i++){
         document.getElementById("dias"+i).textContent = calculaTempo(tempos[i])[0];
@@ -46,10 +45,8 @@ function atualizaCronometro(){
         document.getElementById("seg"+i).textContent = calculaTempo(tempos[i])[3];   
     }
 }
-
 function comecaCronometro(){
     atualizaCronometro();
     setInterval(atualizaCronometro,1000);
 }
-
 comecaCronometro();
